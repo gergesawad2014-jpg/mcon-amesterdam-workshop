@@ -7,7 +7,14 @@ variable "repository_name" {
 variable "repository_description" {
   description = "A description for the GitHub repository"
   type        = string
+
+
+validation {
+    condition       = length(var.repository_description) >0
+    error_message   "the repository descriotion cannot be empty"
 }
+}
+
  
  
 variable "repository_private" {

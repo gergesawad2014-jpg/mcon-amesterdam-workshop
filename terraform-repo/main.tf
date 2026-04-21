@@ -1,5 +1,5 @@
 resource "github_repository" "repo" {
-    name        = "expamle-repository"
-    description = "test"
-    private     = true
+    name        = var.repository_name
+    description = var.repository_description
+    private     = var.repositort_provate
 }
